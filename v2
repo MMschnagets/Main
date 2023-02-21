@@ -1,0 +1,6 @@
+def solution(number):
+    set_of_numbers = set()
+    for i in [3, 5, 15]:
+        temp_list = [x for x in range(0, number) if x % i == 0]
+        set_of_numbers.update(set(temp_list))
+    return sum(set_of_numbers)
