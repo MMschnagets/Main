@@ -1,0 +1,14 @@
+from selenium import webdriver
+import time
+
+url = "https://www.facebook.com/"
+driver = webdriver.Chrome("D:\\Python Projects\\Main\\bots\\chrome_driver\\chromedriver.exe")
+
+try:
+    driver.get(url=url)
+    time.sleep(10)
+except Exception as ex:
+    print(ex)
+finally:
+    driver.close()
+    driver.quit()
