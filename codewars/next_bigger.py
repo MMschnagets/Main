@@ -2,20 +2,21 @@ def next_bigger(n):
     if (n<10):
         return -1
     str_n = str(n)
-    digits_list = [int(x) for x in str_n]
-    digits_list.reverse()
-    length = len(digits_list)
-
-    for i in range(0, length):
-        for j in range(i + 1, length):
-            if (digits_list[i]>digits_list[j]):
-                digits_list[j], digits_list[i] = digits_list[i], digits_list[j]
-                str_num = str()
-                digits_list.reverse()
-                for k in digits_list:
-                    str_num += str(k)
-                return int(str_num)
-    
+    dict_unique = {}
+    length = len(str_n)
+    for k in str_n:
+        if k not in dict_unique.keys():
+            dict_unique.update({k: str_n.count(k)})
+    x = n + 1
+    while x < pow(10, length):
+        str_x = str(x)
+        count_of_digits = 0
+        for k in dict_unique.keys():
+            if dict_unique.get(k) == str_x.count(k):
+                count_of_digits+=str_x.count(k)
+        if count_of_digits == length:
+            return x
+        x+=1
     return -1
 
-next_bigger("144")
+print(next_bigger(249891781))
