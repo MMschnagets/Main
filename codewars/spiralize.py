@@ -5,3 +5,5 @@ def spiralize(size):
         for j in range(0, size):
             pass
     return spiral
+
+spiralize(5)
