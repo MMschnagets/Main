@@ -1,8 +1,12 @@
 from selenium import webdriver
 import time
 
+#options
+options = webdriver.ChromeOptions()
+options.add_argument("user-agent=HelloWorld:)")
+
 url = "https://www.facebook.com/"
-driver = webdriver.Chrome("D:\\Python Projects\\Main\\bots\\chrome_driver\\chromedriver.exe")
+driver = webdriver.Chrome("D:\\Python Projects\\Main\\bots\\chrome_driver\\chromedriver.exe", options=options)
 
 try:
     driver.get(url=url)
