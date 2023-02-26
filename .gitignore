@@ -1,3 +1,9 @@
 .vscode/settings.json
 .vscode/Main.code-workspace
 .vscode/launch.json
+codewars/.idea/inspectionProfiles/profiles_settings.xml
+codewars/.idea/.gitignore
+codewars/.idea/codewars.iml
+codewars/.idea/misc.xml
+codewars/.idea/modules.xml
+codewars/.idea/vcs.xml
